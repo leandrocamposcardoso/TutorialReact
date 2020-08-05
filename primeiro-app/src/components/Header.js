@@ -2,12 +2,12 @@
 import React from 'react';
 
 const TodoList = ({ numTodos }) => (
-    < div className='card-header' >
-    <h1>Carrinho de compras</h1>
-    <h2 className='card-header-title header'>
-            Você selecionou  {numTodos} items
-    </h2>
-    </div >
+    <div className='card-header'>
+        <h1>Tarefas</h1>
+        <h3 className='card-header-title header'>
+            Você possui  {numTodos} tarefas
+    </h3>
+    </div>
 )
 
 export default TodoList;

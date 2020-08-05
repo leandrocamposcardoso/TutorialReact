@@ -10,3 +10,5 @@ npx create-react-app [nome_projeto]
 A pasta de componentes deve ser criada dentro da pasta src
 
 src -> componets
+
+## 

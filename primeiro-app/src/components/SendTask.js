@@ -2,33 +2,32 @@ import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 
-const SendTodo = ({ handleSubmit }) => {
-    const [term, setTerm] = useState('oi');
-
+const SendTask = ({ handleSubmit }) => {
+    const [term, setTerm] = useState('');
 
     return (
         <form onSubmit={handleSubmit}>
             <input
                 type='text'
                 className='input'
-                placeholder='Enter Item'
+                placeholder='Inserir uma tarefa'
                 value={term}
                 onChange={(e) => { setTerm(e.target.value) }}
             />
-            <button className='button'>Submit</button>
+            <button className='btn btn-success'>Adicionar</button>
         </form>
     )
 }
 
-SendTodo.propTypes = {
+SendTask.propTypes = {
     handleSubmit: PropTypes.func,
     term: PropTypes.string,
 };
 
-SendTodo.defaultProps = {
+SendTask.defaultProps = {
     handleSubmit: null,
     term: '',
 
 };
 
-export default SendTodo;
+export default SendTask;
