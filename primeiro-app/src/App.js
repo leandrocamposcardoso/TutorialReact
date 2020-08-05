@@ -14,16 +14,20 @@ function App() {
 
   const handleSubmit = e => {
     e.preventDefault();
-    const newArr = [...tasks, e.target[0].value ]
+    const newArr = [...tasks, e.target[0].value]
     setTasks(newArr);
 
   }
 
   return (
     <div className="App">
-      <Header numTodos={tasks.length} />
-      <TodoList task={tasks} onDelete={handleDelete} />
-      <SendTodo handleSubmit={handleSubmit} />
+      <div className='wrapper'>
+        <div className='card frame'>
+          <Header numTodos={tasks.length} />
+          <TodoList task={tasks} onDelete={handleDelete} />
+          <SendTodo handleSubmit={handleSubmit} />
+        </div>\
+      </div>
     </div>
   );
 }
